@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  background: #000;
+  color: #00e0ff;
+  overflow-x: hidden;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #000000 0%, #050505 100%);
+}
+
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px 40px;
+  background: rgba(10, 10, 20, 0.85);
+  border: 2px solid #ff0040;
+  box-shadow: 0 0 20px #00e0ff, 0 0 40px #ff0040;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  animation: neonPulse 4s infinite alternate;
+}
+
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 10px #00e0ff, 0 0 20px #ff0040;
+  }
+  100% {
+    box-shadow: 0 0 20px #ff0040, 0 0 40px #00e0ff;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #00e0ff;
+  text-shadow: 0 0 10px #ff0040;
+  margin-bottom: 10px;
+}
+
+header p {
+  text-align: center;
+  color: #ffb3d9;
+  margin-bottom: 30px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: #00e0ff;
+  border-bottom: 2px solid #ff0040;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #111;
+  margin: 8px 0;
+  padding: 12px;
+  border-left: 5px solid #00e0ff;
+  box-shadow: 0 0 10px #00e0ff;
+  color: #fff;
+}
+
+a {
+  color: #00e0ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #ff0040;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* WhatsApp botón flotante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #0f0;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 0 20px #00ff99;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #00ff99;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #00ff99;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #00ff99;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    margin: 30px 15px;
+    padding: 25px 20px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  ul li, p {
+    font-size: 1rem;
+  }
+}
